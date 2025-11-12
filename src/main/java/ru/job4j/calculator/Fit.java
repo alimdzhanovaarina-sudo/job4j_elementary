@@ -11,14 +11,13 @@ public class Fit {
     }
 
     public static void main(String[] args) {
-        short height = 187;
-        double man = Fit.manWeight(height);
+        short manHeight = 187; // Переименовали для ясности
+        double man = Fit.manWeight(manHeight);
         System.out.println("Man " + manHeight + " cm is " + man + " kg");
-    }
 
-    public static void main(String[] args) {
-        short heightFemale = 170;
-        double woman = Fit.womanWeight(height);
+        short womanHeight = 170; // Переименовали для ясности
+        double woman = Fit.womanWeight(womanHeight);
         System.out.println("Woman " + womanHeight + " cm is " + woman + " kg");
     }
 }
+
