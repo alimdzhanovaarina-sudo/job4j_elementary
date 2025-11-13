@@ -31,5 +31,4 @@ class RectangleTest {
         double output = Rectangle.diagonal(length, width);
         assertThat(output).isEqualTo(expected, withPrecision(0.01));
     }
-
 }
