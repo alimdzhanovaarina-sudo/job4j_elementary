@@ -9,8 +9,8 @@ public class ArrayLoop {
             System.out.println("numbers[" + index + "] = " + numbers[index]);
         }
         System.out.println("Вывод элементов массива:");
-        for (int index = 0; index < numbers.length; index++) {
-            System.out.println(numbers[index]);
+        for (int number : numbers) {
+            System.out.println(numbers);
         }
     }
 }
