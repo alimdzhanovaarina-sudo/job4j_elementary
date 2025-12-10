@@ -2,15 +2,13 @@ package ru.job4j.array;
 
 public class Check {
     public static boolean mono(boolean[] data) {
-        boolean isAllTheSame = true;
-        boolean standardBulbState = data[0];
-        for (int currentBulbIndex = 1; currentBulbIndex < data.length; currentBulbIndex++) {
-            boolean currentBulbState = data[currentBulbIndex];
-            if (currentBulbState != standardBulbState) {
-                isAllTheSame = false;
+        boolean result = true;
+        for (int i = 1; i < data.length; i++) {
+            if (data[i] != data[i - 1]) {
+                result = false;
                 break;
             }
         }
-        return isAllTheSame;
+        return result;
     }
 }
