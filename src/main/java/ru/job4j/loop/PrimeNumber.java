@@ -11,6 +11,7 @@ public class PrimeNumber {
         }
         return count;
     }
+
     public static void main(String[] args) {
         System.out.println("Простых чисел до 5: " + calc(5));
         System.out.println("Простых чисел до 10: " + calc(10));
