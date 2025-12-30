@@ -1,15 +1,22 @@
 package ru.job4j.ru.job4j;
 
+import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
-import static ru.job4j.ru.job4j.Mono.isMono;
 
-class MonoTest {
-    public static void testIsMono() {
-        int[] arr1 = {1, 2, 3};
-        int[] arr2 = {3, 2, 1};
-        int[] arr3 = {3, 1, 3};
-        System.out.println("isMono([1, 2, 3]): " + isMono(arr1));
-        System.out.println("isMono([3, 2, 1]): " + isMono(arr2));
-        System.out.println("isMono([3, 1, 3]): " + isMono(arr3));
+public class MonoTest {
+
+    @Test
+    public void testIsMono() {
+        assertTrue(Mono.isMono(new int[]{1, 2, 3}));
+        assertTrue(Mono.isMono(new int[]{3, 2, 1}));
+        assertTrue(Mono.isMono(new int[]{1, 3, 2}));
+    }
+
+    @Test
+    public void testIsAsc() {
+        assertTrue(Mono.isAsc(new int[]{1, 2, 3}));
+        assertFalse(Mono.isAsc(new int[]{3, 2, 1}));
+        assertFalse(Mono.isAsc(new int[]{1, 3, 2}));
     }
 }
+
