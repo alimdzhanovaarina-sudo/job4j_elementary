@@ -5,14 +5,14 @@ public class TwoNumberSum {
         if (array == null || array.length < 2) {
             return new int[0];
         }
-        int left = 0;
+        int lefft = 0;
         int right = array.length - 1;
-        while (left < right) {
-            int sum = array[left] + array[right];
+        while (lefft < right) {
+            int sum = array[lefft] + array[right];
             if (sum == target) {
-                return new int[]{left, right};
+                return new int[]{lefft, right};
             } else if (sum < target) {
-                left++;
+                lefft++;
             } else {
                 right--;
             }
